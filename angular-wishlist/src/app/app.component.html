@@ -4,7 +4,7 @@
       <h1>Ruteo Simple</h1>
       <div class="nav-link">
         <a [routerLink]="['/home']">Home</a>
-        <a [routerLink]="['/destino']">Destino</a>
+        <!--<a [routerLink]="['/destino']">Destino</a>-->
       </div>
     </div>
   </div>
@@ -17,3 +17,7 @@
 
   <router-outlet></router-outlet>
 </div>
+
+<hr class="mb 5">
+
+Fecha: {{ time | async }} <!--con async queda observando la variable para mostrarla cuando cambie-->

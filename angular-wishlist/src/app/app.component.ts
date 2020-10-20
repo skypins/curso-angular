@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-wishlist';
+  //definimos time para que quede observendo los cambios, seteamos que observe cada un segundo y muestra la hora con seg
+  time = new Observable(observer => {
+    setInterval(() => observer.next(new Date().toString()), 1000);
+  });
 }

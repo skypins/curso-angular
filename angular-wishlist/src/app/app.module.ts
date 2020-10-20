@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { DestinoViajeComponent } from './destino-viaje/destino-viaje.component';
 import { ListaDestinosComponent } from './lista-destinos/lista-destinos.component';
 import { DestinoDetalleComponent } from './destino-detalle/destino-detalle.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormDestinoViajeComponent } from './form-destino-viaje/form-destino-viaje.component';
+import { DestinosApiClient } from './models/destinos-api-client.model';
 
 
 @NgModule({
@@ -14,13 +17,18 @@ import { DestinoDetalleComponent } from './destino-detalle/destino-detalle.compo
     AppComponent,
     DestinoViajeComponent,
     ListaDestinosComponent,
-    DestinoDetalleComponent
+    DestinoDetalleComponent,
+    FormDestinoViajeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    DestinosApiClient
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
